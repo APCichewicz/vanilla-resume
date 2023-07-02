@@ -2,14 +2,11 @@
 const visitorCountSpan = document.getElementById("visitor-count");
 
 // function to run on pageload
-
-document.addEventListener("DOMContentLoaded", function () {
-  fetch("https://apcvisitorcount.azurewebsites.net/api/ResumeHttpTrigger?")
-    .then((res) => res.json())
-    .then((res) => {
-      visitorCountSpan.innerHTML = res.value;
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});
+fetch("https://apcvisitorcount.azurewebsites.net/api/ResumeHttpTrigger?")
+  .then((res) => res.json())
+  .then((res) => {
+    visitorCountSpan.innerHTML = res.value;
+  })
+  .catch((err) => {
+    console.log(err);
+  });
