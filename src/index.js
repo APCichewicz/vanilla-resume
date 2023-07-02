@@ -1,17 +1,15 @@
-import axios from "axios";
-
 // get the span element with id visitor-count
 const visitorCountSpan = document.getElementById("visitor-count");
 
 // function to run on pageload
 
 document.addEventListener("DOMContentLoaded", function () {
-  axios
-    .get("https://apcvisitorcount.azurewebsites.net/api/ResumeHttpTrigger?")
-    .then(function (response) {
-      visitorCountSpan.innerHTML = response.data;
+  fetch("https://api.countapi.xyz/update/visitors/website/?amount=1")
+    .then((res) => res.json())
+    .then((res) => {
+      visitorCountSpan.innerHTML = res.value;
     })
-    .catch(function (error) {
-      console.log(error);
+    .catch((err) => {
+      console.log(err);
     });
 });
