@@ -22,8 +22,8 @@ header {
 header {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr;
-  height: 10rem;
+  grid-template-rows: 2fr 1fr 1fr;
+  height: auto;
   align-items: center;
   justify-items: center;
 }
