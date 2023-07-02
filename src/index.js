@@ -3,7 +3,7 @@ const visitorCountSpan = document.getElementById("visitor-count");
 
 // function to run on pageload
 fetch(
-  "http://apcresumeapi.azure-api.net/apcvisitorcount/ResumeHttpTrigger?subscription-key=82b91c6d16254f6583170cd080fec7ac"
+  "https://apcresumeapi.azure-api.net/apcvisitorcount/ResumeHttpTrigger?subscription-key=82b91c6d16254f6583170cd080fec7ac"
 )
   .then((res) => res.json())
   .then((res) => {
